@@ -1,6 +1,7 @@
 export default class AuthService {
-  constructor(http) {
+  constructor(http, tokenStorage) {
     this.http = http
+    this.tokenStorage
   }
 
   async signup(username, password, name, email, url) {

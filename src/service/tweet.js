@@ -1,6 +1,7 @@
 export default class TweetService {
-  constructor(http) {
+  constructor(http, tokenStorage) {
     this.http = http
+    this.tokenStorage
   }
 
   async getTweets(username) {
