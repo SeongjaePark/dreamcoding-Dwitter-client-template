@@ -1,9 +1,9 @@
 import { AuthErrorEventBus } from '../context/AuthContext'
 
 export default class HttpClient {
-  constructor(baseURL) {
+  constructor(baseURL, authErrorEventBus) {
     this.baseURL = baseURL
-    this.authErrorEventBus = new AuthErrorEventBus()
+    this.authErrorEventBus = authErrorEventBus
   }
 
   async fetch(url, options) {
